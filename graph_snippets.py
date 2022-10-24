@@ -1,5 +1,5 @@
 # use with:
-#    import graph_snippets 
+#    import graph_snippets or from graph_snippets import line_plot, bar_plot
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -7,8 +7,7 @@ import sys
 
 
 
-def line_plot(df, x, y, figsize=(16,10), xlabel=None, ylabel=None, fontsize=12, legend_label=None, title=None,
-                library="plt"):
+def line_plot(df, x, y, figsize=(16,10), xlabel=None, ylabel=None, fontsize=12, legend_label=None, title=None, library="plt"):
     
     if library == "plt":
         plt.figure(figsize=figsize)
@@ -34,9 +33,8 @@ def line_plot(df, x, y, figsize=(16,10), xlabel=None, ylabel=None, fontsize=12, 
 
 
 
-def bar_plot(df, x, y, figsize=(16,10), xlabel=None, ylabel=None, fontsize=12, legend_label=None, title=None, 
-                library="plt", hue=None):
-        """_summary_
+def bar_plot(df, x, y, figsize=(16,10), xlabel=None, ylabel=None, fontsize=12, legend_label=None, title=None, library="plt", hue=None):
+    """_summary_
 
     Args:
         df (_type_): _description_
@@ -71,5 +69,5 @@ def bar_plot(df, x, y, figsize=(16,10), xlabel=None, ylabel=None, fontsize=12, l
         plt.ylabel(ylabel, fontsize=fontsize)
         plt.title(title, fontsize=20)
         plt.legend(loc='upper left', fontsize=13)
-        plt.show(); # oder eben return plot
+        plt.show(); # or return plot
 
